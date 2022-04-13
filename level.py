@@ -11,7 +11,6 @@ class Level:
         pygame.mixer.music.play(-1)
         self.display_surface = pygame.display.get_surface() # задаем поверхность на которой будет расположена стенка
         self.level = 1 # задаем что в классе self будет level 1 
-        # sprites groups
         self.visible_sprites = pygame.sprite.Group() # create visible sprites
         self.obstacle_sprites = pygame.sprite.Group() #create obstacle sprites
         self.destroy = pygame.sprite.Group()
