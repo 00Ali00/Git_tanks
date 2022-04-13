@@ -30,8 +30,6 @@ class Game:
                 self.level.run()
             if self.end_level.isRun == False:
                 isRun = False
-            if self.end_level.isRun == True:
-                isRun = True
             pygame.display.update() # обновляем экран 
             self.clock.tick(FPS) # задаем количество выполнений цикла в секунду (FPS)
             #pygame.time.delay(20)
@@ -39,4 +37,4 @@ class Game:
 if __name__ == '__main__': # проверяет программа или пакет
     pygame.font.init()
     game = Game()
-    game.run() 
+    game.run()  
