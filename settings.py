@@ -1,6 +1,6 @@
 import pygame
-WIDTH = 1366
-HEIGHT = 768
+WIDTH = 704
+HEIGHT = 704
 FPS = 60
 TILESIZE = 32
 
