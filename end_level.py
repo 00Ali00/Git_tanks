@@ -6,6 +6,8 @@ class End_level:
     def __init__(self):
         self.display_surface = pygame.display.get_surface() 
         self.main_font = pygame.font.SysFont('comicsans', 50)
+        self.text = self.main_font.render('Game over', 1, 'white', 'black')
+        self.pos = self.text.get_rect(center=(WIDTH//2, HEIGHT//2))
         self.level = 1 
         self.visible_sprites = pygame.sprite.Group() 
         self.create_map() 
@@ -27,5 +29,7 @@ class End_level:
 
     def run(self):
         self.input()
-        self.visible_sprites.draw(self.display_surface) 
-        self.visible_sprites.update()
+        self.display_surface.fill('black')
+        self.display_surface.blit(self.text, self.pos)
+        # self.visible_sprites.draw(self.display_surface) 
+        # self.visible_sprites.update()
