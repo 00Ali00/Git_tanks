@@ -39,5 +39,3 @@ class End_level:
         self.display_surface.blit(self.text, self.pos)
         self.display_surface.blit(self.text_space, self.pos_space)
         self.display_surface.blit(self.text_p, self.pos_p)
-        # self.visible_sprites.draw(self.display_surface) 
-        # self.visible_sprites.update()

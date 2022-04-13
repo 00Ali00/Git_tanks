@@ -7,7 +7,7 @@ class Game:
         pygame.init() # инициализируем 
         pygame.display.set_caption('Tanks') # задаем имя
         pygame.display.set_icon(pygame.image.load('images/Иконка.bmp')) # создаем иконку в углу экрана
-        self.screen = pygame.display.set_mode((WIDTH, HEIGHT)) # задаем высоту и ширину нашего экрана
+        self.screen = pygame.display.set_mode((0, 0), pygame.FULLSCREEN) # задаем высоту и ширину нашего экрана
         self.clock = pygame.time.Clock()
         self.level = Level() # класс 
         self.end_level = End_level() # класс
