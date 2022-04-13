@@ -7,7 +7,11 @@ class End_level:
         self.display_surface = pygame.display.get_surface() 
         self.main_font = pygame.font.SysFont('comicsans', 50)
         self.text = self.main_font.render('Game over', 1, 'white', 'black')
-        self.pos = self.text.get_rect(center=(WIDTH//2, HEIGHT//2))
+        self.text_space = self.main_font.render('Press space to QUIT', 1, 'white', 'black')
+        self.text_p = self.main_font.render('Press p to RESTART', 1, 'white', 'black')
+        self.pos = self.text.get_rect(center=(WIDTH//2, HEIGHT//2 - 90))
+        self.pos_space = self.text.get_rect(center=(WIDTH//2 - 90, HEIGHT//2 ))
+        self.pos_p = self.text.get_rect(center=(WIDTH//2 - 90, HEIGHT//2 + 100))
         self.level = 1 
         self.visible_sprites = pygame.sprite.Group() 
         self.create_map() 
@@ -26,10 +30,13 @@ class End_level:
 
         if keys[pygame.K_SPACE]:
             self.isRun = False
+        # elif keys[pygame.K_p]
 
     def run(self):
         self.input()
         self.display_surface.fill('black')
         self.display_surface.blit(self.text, self.pos)
+        self.display_surface.blit(self.text_space, self.pos_space)
+        self.display_surface.blit(self.text_p, self.pos_p)
         # self.visible_sprites.draw(self.display_surface) 
         # self.visible_sprites.update()
