@@ -30,7 +30,8 @@ class End_level:
 
         if keys[pygame.K_SPACE]:
             self.isRun = False
-        # elif keys[pygame.K_p]
+        elif keys[pygame.K_p]:
+            self.isRun = True
 
     def run(self):
         self.input()
