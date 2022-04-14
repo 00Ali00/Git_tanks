@@ -23,13 +23,14 @@ class Game:
                     isRun = False
             self.screen.fill('black') # заполняем экран черным цветом
             
-            if self.level.end == True:
-                self.end_level.run()
-            else:
+            if self.level.end != True:
                 self.start_game.run()
                 if self.start_game.isStart == True:
                     self.screen.fill('black')
                     self.level.run()
+            else:
+                self.end_level.run()
+                
             if self.end_level.isRun == True:
                 isRun = False
             if self.end_level.isRestart == True:
