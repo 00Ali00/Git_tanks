@@ -1,5 +1,6 @@
 import pygame 
 from settings import *
+
 class Boom (pygame.sprite.Sprite):
     def __init__(self, groups, pos):
         super().__init__(groups)        
