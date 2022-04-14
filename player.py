@@ -15,7 +15,7 @@ class Player(pygame.sprite.Sprite): #добавление фун-й из дру�
         self.time = 80
         self.isAlive = True
         self.isReady = True
-        self.lives = 1
+        self.lives = 0
 
     def input(self):
         keys = pygame.key.get_pressed() #задаем в переменную keys все нажатые кнопки в момент FPS
