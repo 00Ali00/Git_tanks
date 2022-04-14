@@ -3,6 +3,7 @@ from settings import *
 from start_game import Start_game
 from level import Level
 from end_level import End_level
+
 class Game:
     def __init__(self):
         pygame.init() # инициализируем 
