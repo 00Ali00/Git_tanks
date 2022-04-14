@@ -35,6 +35,7 @@ class Game:
                 if self.end_level.isRestart == True:
                     self.screen.fill('black')
                     self.level.run()
+                    pygame.mixer.music.unpause()
                 
             
             pygame.display.update() # обновляем экран 
