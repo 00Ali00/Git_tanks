@@ -24,7 +24,7 @@ class End_level:
 
         if keys[pygame.K_x]:
             self.isRun = True
-        elif keys[pygame.K_ESCAPE]:
+        elif keys[pygame.K_RETURN]:
             self.isRestart = True
 
     def restart(self):
