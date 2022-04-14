@@ -34,5 +34,4 @@ class Start_game:
     def run(self):
         self.input()
         self.start_text()
-        self.display_surface.fill('black')
         self.display_surface.blit(self.text, self.pos)
