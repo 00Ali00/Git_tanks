@@ -30,7 +30,7 @@ class Game:
                     self.level.run()
             else:
                 self.end_level.run()
-                if self.end_level.isRun == True:
+                if self.end_level.isQuit == True:
                     isRun = False
                 if self.end_level.isRestart == True:
                     self.level.end == False
