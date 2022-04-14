@@ -21,12 +21,12 @@ class Start_game:
     def input(self):
         keys = pygame.key.get_pressed()
 
-        if keys[pygame.K_SPACE]:
+        if keys[pygame.K_RETURN]:
             self.isRun = True
 
     def restart(self):
         self.main_font = pygame.font.SysFont('comicsans', 50)
-        self.text = self.main_font.render('Game over', 1, 'white', 'black')
+        self.text = self.main_font.render('To play press ENTER', 1, 'white', 'black')
         self.pos = self.text.get_rect(center=(WIDTH//2, HEIGHT//2 - 90))
 
 

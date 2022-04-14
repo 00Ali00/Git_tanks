@@ -2,6 +2,7 @@ import pygame
 from settings import *
 from level import Level
 from end_level import End_level
+from start_game import Start_game
 class Game:
     def __init__(self):
         pygame.init() # инициализируем 
@@ -9,6 +10,7 @@ class Game:
         pygame.display.set_icon(pygame.image.load('images/Иконка.bmp')) # создаем иконку в углу экрана
         self.screen = pygame.display.set_mode((WIDTH, HEIGHT)) # задаем высоту и ширину нашего экрана
         self.clock = pygame.time.Clock()
+        self.start_game = Start_game()
         self.level = Level() # класс 
         self.end_level = End_level() # класс
         
@@ -27,7 +29,10 @@ class Game:
                 pygame.mixer.music.pause()
                 self.end_level.run()
             else:
-                self.level.run()
+                self.start_game.run()
+                if self.start_game.isRun == True:
+                    self.screen.fill('black')
+                    self.level.run()
             if self.end_level.isRun == True:
                 isRun = False
             if self.end_level.isRestart == True:
