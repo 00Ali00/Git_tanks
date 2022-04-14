@@ -32,7 +32,7 @@ class Level:
 
     def level_text(self):
         self.main_font = pygame.font.SysFont('comicsans', 30)
-        self.text = self.main_font.render('Lives' + str(self.player.lives), 1, 'white', 'black')
+        self.text = self.main_font.render('Lives' + str(LIVES), 1, 'white', 'black')
         self.pos = self.text.get_rect(center=(600, 11))
     
     def run(self):
