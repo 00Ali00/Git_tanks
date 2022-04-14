@@ -5,19 +5,9 @@ from tile import Tile
 class End_level:
     def __init__(self):
         self.display_surface = pygame.display.get_surface() 
-        self.level = -1 
-        self.visible_sprites = pygame.sprite.Group() 
-        self.create_map() 
+        self.level = -1  
         self.isRun = False
         self.isRestart = False
-    
-    def create_map(self):
-        for row_index, row in enumerate(WORLD_MAP):
-            for col_index, col in enumerate(row): 
-                x = col_index*TILESIZE
-                y = row_index*TILESIZE
-                if col == 'x':
-                    Tile((x,y),'images/sten1.png', [self.visible_sprites])
 
     def input(self):
         keys = pygame.key.get_pressed()
@@ -40,7 +30,6 @@ class End_level:
     def run(self):
         self.input()
         self.restart_text()
-        self.display_surface.fill('black')
         self.display_surface.blit(self.text, self.pos)
         self.display_surface.blit(self.text_space, self.pos_space)
         self.display_surface.blit(self.text_p, self.pos_p)
