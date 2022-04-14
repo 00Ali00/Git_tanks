@@ -8,7 +8,7 @@ class Start_game:
         self.level = 0
         self.visible_sprites = pygame.sprite.Group() 
         self.create_map() 
-        self.isRun = False
+        self.isStart = False
     
     def create_map(self):
         for row_index, row in enumerate(WORLD_MAP):
@@ -22,9 +22,9 @@ class Start_game:
         keys = pygame.key.get_pressed()
 
         if keys[pygame.K_RETURN]:
-            self.isRun = True
+            self.isStart = True
 
-    def restart(self):
+    def start_text(self):
         self.main_font = pygame.font.SysFont('comicsans', 50)
         self.text = self.main_font.render('To play press ENTER', 1, 'white', 'black')
         self.pos = self.text.get_rect(center=(WIDTH//2, HEIGHT//2 - 90))
@@ -33,6 +33,6 @@ class Start_game:
 
     def run(self):
         self.input()
-        self.restart()
+        self.start_text()
         self.display_surface.fill('black')
         self.display_surface.blit(self.text, self.pos)
