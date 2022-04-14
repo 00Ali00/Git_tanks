@@ -3,6 +3,7 @@ WIDTH = 704
 HEIGHT = 704
 FPS = 60
 TILESIZE = 32
+LIVES = 0
 
 PLAYER_SPRITE = pygame.image.load('images/tank.png')
 BULLET_SPRITE = pygame.image.load('images/bullet.png')
