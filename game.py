@@ -28,8 +28,12 @@ class Game:
                 self.end_level.run()
             else:
                 self.level.run()
-            if self.end_level.isRun == False:
+            if self.end_level.isRun == True:
                 isRun = False
+            if self.end_level.isRestart == True:
+                    self.level.end == False
+                    self.screen.fill('black')
+                    self.level.run()
             pygame.display.update() # обновляем экран 
             self.clock.tick(FPS) # задаем количество выполнений цикла в секунду (FPS)
             #pygame.time.delay(20)
