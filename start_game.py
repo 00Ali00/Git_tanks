@@ -19,8 +19,6 @@ class Start_game:
         self.text = self.main_font.render('To play press ENTER', 1, 'white', 'black')
         self.pos = self.text.get_rect(center=(WIDTH//2, HEIGHT//2 - 90))
 
-
-
     def run(self):
         self.input()
         self.start_text()
