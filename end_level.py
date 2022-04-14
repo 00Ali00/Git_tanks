@@ -27,7 +27,7 @@ class End_level:
         elif keys[pygame.K_RETURN]:
             self.isRestart = True
 
-    def restart(self):
+    def restart_text(self):
         self.main_font = pygame.font.SysFont('comicsans', 50)
         self.text = self.main_font.render('Game over', 1, 'white', 'black')
         self.text_space = self.main_font.render('Press X to QUIT', 1, 'white', 'black')
@@ -39,7 +39,7 @@ class End_level:
 
     def run(self):
         self.input()
-        self.restart()
+        self.restart_text()
         self.display_surface.fill('black')
         self.display_surface.blit(self.text, self.pos)
         self.display_surface.blit(self.text_space, self.pos_space)
