@@ -21,9 +21,6 @@ class Game:
             for event in pygame.event.get(): # создаем события 
                 if event.type == pygame.QUIT: # если пользователь нажал крестик, цикл останавливается 
                     isRun = False
-                    # exit()
-                    # pygame.quit()
-                    # sys.exit()
             self.screen.fill('black') # заполняем экран черным цветом
             
             if self.level.end == True:
@@ -41,8 +38,7 @@ class Game:
                 self.level.run()
             pygame.display.update() # обновляем экран 
             self.clock.tick(FPS) # задаем количество выполнений цикла в секунду (FPS)
-            #pygame.time.delay(20)
-
+            
 if __name__ == '__main__': # проверяет программа или пакет
     pygame.font.init()
     game = Game()
