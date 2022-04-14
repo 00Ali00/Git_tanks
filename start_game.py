@@ -1,6 +1,5 @@
 import pygame
 from settings import *
-from tile import Tile
 
 class Start_game:
     def __init__(self):

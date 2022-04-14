@@ -1,6 +1,5 @@
 import pygame
 from settings import *
-from tile import Tile
 
 class End_level:
     def __init__(self):
