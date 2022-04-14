@@ -2,6 +2,7 @@ import pygame
 from settings import *
 from random import randrange 
 from bullet import Bullet
+
 class Enemy(pygame.sprite.Sprite): #добавление фун-й из другой папки 
 
     def __init__(self, pos, name, groups, obstacle_sprites, destroy):

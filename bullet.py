@@ -1,6 +1,7 @@
 import pygame 
 from settings import *
 from boom import Boom
+
 class Bullet(pygame.sprite.Sprite):  
     def __init__(self, pos, groups, angle, obstacle_sprites, destroy):
         super().__init__(groups) 

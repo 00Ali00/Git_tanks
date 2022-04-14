@@ -1,8 +1,8 @@
 import pygame 
 from settings import *
 from bullet import Bullet
-class Player(pygame.sprite.Sprite): #добавление фун-й из другой папки 
 
+class Player(pygame.sprite.Sprite): #добавление фун-й из другой папки 
     def __init__(self, pos, name, groups, obstacle_sprites, destroy):
         super().__init__(groups) #инициализация функций, которые мы добавили
         self.image = pygame.image.load(name).convert_alpha() #добавление картинки 
@@ -22,7 +22,6 @@ class Player(pygame.sprite.Sprite): #добавление фун-й из дру�
         self.direction.y = 0
         self.direction.x = 0
 
-        # задаем движения по кнопкам
         if keys[pygame.K_UP]:
             self.direction.y = -1
             self.angle = 0
@@ -59,9 +58,6 @@ class Player(pygame.sprite.Sprite): #добавление фун-й из дру�
                 sound_bullet.play()
         
     def move(self, speed):
-        # if self.direction.magnitude() != 0:
-        #     self.direction = self.direction.normalize()
-        # self.rect.center += self.direction * speed #задаем перемещение
         self.rect.x += self.direction.x * speed
         self.collision('horizontal')
         self.rect.y += self.direction.y * speed

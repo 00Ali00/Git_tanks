@@ -3,9 +3,9 @@ from enemy import *
 from settings import TILESIZE, WORLD_MAP
 from tile import Tile
 from player import Player
+
 class Level:
     def __init__(self):
-        # pygame.mixer.pre_init(44100, -16, 2, 512)
         pygame.mixer.music.load('sounds/Фон.mp3')
         pygame.mixer.music.set_volume(0.08)
         pygame.mixer.music.play(-1)
@@ -35,3 +35,4 @@ class Level:
         self.visible_sprites.update() #обновляем
         if len(self.players) == 0:
             self.end = True
+            pygame.mixer.music.pause()
