@@ -27,7 +27,6 @@ class Game:
             self.screen.fill('black') # заполняем экран черным цветом
             
             if self.level.end == True:
-                pygame.mixer.music.pause()
                 self.end_level.run()
             else:
                 self.start_game.run()
