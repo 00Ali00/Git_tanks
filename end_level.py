@@ -15,7 +15,8 @@ class End_level:
         self.level = 1 
         self.visible_sprites = pygame.sprite.Group() 
         self.create_map() 
-        self.isRun = True
+        self.isRun = False
+        self.isRestart = False
     
     def create_map(self):
         for row_index, row in enumerate(WORLD_MAP):
@@ -29,9 +30,9 @@ class End_level:
         keys = pygame.key.get_pressed()
 
         if keys[pygame.K_x]:
-            self.isRun = False
+            self.isRun = True
         elif keys[pygame.K_RETURN]:
-            self.isRun = False
+            self.isRestart = True
 
     def run(self):
         self.input()
