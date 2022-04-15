@@ -7,7 +7,6 @@ class End_level:
         self.level = -1  
         self.isQuit = False
         self.isRestart = False
-        self.finish_end_level = False
 
     def input(self):
         keys = pygame.key.get_pressed()
