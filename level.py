@@ -16,7 +16,7 @@ class Level:
         self.destroy = pygame.sprite.Group()
         self.players = pygame.sprite.Group()
         self.create_map() # create map
-        self.end = False
+        self.finish_level = False
 
     def create_map(self):
         for row_index, row in enumerate(WORLD_MAP): # пронумеровываем списки 
@@ -41,5 +41,5 @@ class Level:
         self.level_text()
         self.display_surface.blit(self.text, self.pos)
         if len(self.players) == 0:
-            self.end = True
+            self.finish_level = True
             pygame.mixer.music.pause()

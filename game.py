@@ -23,7 +23,7 @@ class Game:
                     isRun = False
             self.screen.fill('black') # заполняем экран черным цветом
             
-            if self.level.end == False:
+            if self.level.finish_level == False:
                 self.start_game.run()
                 if self.start_game.isStart == True:
                     self.screen.fill('black')
