@@ -47,13 +47,13 @@ class Player(pygame.sprite.Sprite): #добавление фун-й из дру�
                 self.isReady = False
                 dx, dy = 0, 0
                 if self.angle == 0:
-                    dy = -TILESIZE-10
+                    dy = -TILESIZE
                 elif self.angle == 1:
-                    dx = -TILESIZE-10
+                    dx = -TILESIZE
                 elif self.angle == 2:
-                    dy = TILESIZE+10
+                    dy = TILESIZE
                 elif self.angle == 3:
-                    dx = TILESIZE+10
+                    dx = TILESIZE
                 Bullet((self.rect.x + dx, self.rect.y + dy),[self.groups[0]], self.angle, self.obstacle_sprites, self.destroy)
                 sound_bullet.play()
         
