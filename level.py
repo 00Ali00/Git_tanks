@@ -29,16 +29,9 @@ class Level:
                 if col == 'e':
                     self.player = Enemy((x,y),'images/tank.png', [self.visible_sprites, self.destroy], self.obstacle_sprites, self.players)
 
-    def level_text(self):
-        self.main_font = pygame.font.SysFont('comicsans', 30)
-        self.text = self.main_font.render('Lives' + str(LIVES), 1, 'white', 'black')
-        self.pos = self.text.get_rect(center=(600, 11))
-    
     def run(self):
         self.visible_sprites.draw(self.display_surface) #рисуем по заданным координатам 
         self.visible_sprites.update() #обновляем
-        self.level_text()
-        self.display_surface.blit(self.text, self.pos)
         if len(self.players) == 0:
             self.finish_level = True
             pygame.mixer.music.pause()
