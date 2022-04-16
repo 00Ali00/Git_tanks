@@ -4,7 +4,6 @@ from settings import *
 class End_level:
     def __init__(self):
         self.display_surface = pygame.display.get_surface() 
-        self.level = -1  
         self.isQuit = False
         self.isRestart = False
 

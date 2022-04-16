@@ -4,7 +4,6 @@ from settings import *
 class Start_game:
     def __init__(self):
         self.display_surface = pygame.display.get_surface() 
-        self.level = 0
         self.isStart = False
     
     def input(self):

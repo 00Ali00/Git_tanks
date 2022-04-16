@@ -34,7 +34,8 @@ class Game:
                     isRun = False
                 if self.end_level.isRestart == True: 
                     self.level.finish_level = False
-                    Level()
+                    self.level = Level()
+                    self.end_level.isRestart = False
                     pygame.mixer.music.unpause()                
             
             pygame.display.update() # обновляем экран 
