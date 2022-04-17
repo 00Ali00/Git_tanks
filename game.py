@@ -34,8 +34,7 @@ class Game:
                 if self.end_level.isRestart == True: 
                     self.level.finish_level = False
                     self.level = Level()
-                    self.end_level.isRestart = False
-                    pygame.mixer.music.unpause()                
+                    self.end_level.isRestart = False                
             pygame.display.update() # обновляем экран 
             self.clock.tick(FPS) # задаем количество выполнений цикла в секунду (FPS)
             
