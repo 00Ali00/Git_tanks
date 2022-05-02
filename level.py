@@ -34,4 +34,4 @@ class Level:
         self.visible_sprites.update() #обновляем
         if len(self.players) == 0:
             self.finish_level = True
-            pygame.mixer.music.pause()
+            pygame.mixer.music.set_volume(0.01)
